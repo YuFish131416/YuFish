@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>诊疗方案展示</title>
+		<style type="text/css">
+			:root {
+				--up-h: 2vh;
+			}
+
+			html {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			body {
+				margin: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.bg {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				background-color: #F7F7F7;
+				background-image: radial-gradient(circle, #F7F7F7, #F7F7F7);
+			}
+
+			.title {
+				position: relative;
+				margin: 0;
+				padding-left: 20px;
+				width: calc(68vw - 30px);
+				left: 10%;
+				font-size: 5vmin;
+				font-weight: bold;
+				border: 5px solid #9A2528;
+				border-width: 0px 0px 0px 10px;
+			}
+
+			.title-1 {
+				top: 15%;
+			}
+
+			.title-2 {
+				top: 20%;
+			}
+
+			.policy {
+				position: relative;
+				margin: 0;
+				left: 10%;
+				width: 65vw;
+				height: 25vh;
+			}
+
+			.policy-1 {
+				top: 17%;
+			}
+
+			.policy-2 {
+				top: 22%;
+			}
+
+			.policy-item {
+				position: absolute;
+				display: inline-block;
+				width: 32vmin;
+				height: 17vmin;
+				overflow: hidden;
+				margin: 0.5vw;
+				border: 2px solid #444444;
+				text-align: center;
+			}
+
+			.p-p-i-1 {
+				top: 0%;
+				left: 0%;
+			}
+
+			.p-p-i-1:hover {
+				top: calc(0% - var(--up-h));
+
+			}
+
+			.p-p-i-1:hover+.title-1 {
+				color: #3B9473;
+			}
+
+			.p-p-i-2 {
+				top: calc((25vh - 18vmin) / 5 * 1);
+				left: calc((65vw - 32vmin) / 5 * 1);
+			}
+
+			.p-p-i-2:hover {
+				top: calc((25vh - 18vmin) / 5 * 1 - var(--up-h));
+			}
+
+			.p-p-i-3 {
+				top: calc((25vh - 18vmin) / 5 * 2);
+				left: calc((65vw - 32vmin) / 5 * 2);
+			}
+
+			.p-p-i-3:hover {
+				top: calc((25vh - 18vmin) / 5 * 2 - var(--up-h));
+			}
+
+			.p-p-i-4 {
+				top: calc((25vh - 18vmin) / 5 * 3);
+				left: calc((65vw - 32vmin) / 5 * 3);
+			}
+
+			.p-p-i-4:hover {
+				top: calc((25vh - 18vmin) / 5 * 3 - var(--up-h));
+			}
+
+			.p-p-i-5 {
+				top: calc((25vh - 18vmin) / 5 * 4);
+				left: calc((65vw - 32vmin) / 5 * 4);
+			}
+
+			.p-p-i-5:hover {
+				top: calc((25vh - 18vmin) / 5 * 4 - var(--up-h));
+			}
+
+			.p-p-i-6 {
+				top: calc(25vh - 18vmin);
+				left: calc(65vw - 32vmin);
+			}
+
+			.p-p-i-6:hover {
+				top: calc(25vh - 18vmin - var(--up-h));
+			}
+
+			.p-c-i-1 {
+				top: 0%;
+				left: 0%;
+			}
+
+			.p-c-i-1:hover {
+				top: calc(0% - var(--up-h));
+			}
+
+			.p-c-i-2 {
+				top: calc((25vh - 18vmin) / 7 * 1);
+				left: calc((65vw - 32vmin) / 7 * 1);
+			}
+
+			.p-c-i-2:hover {
+				top: calc((25vh - 18vmin) / 7 * 1 - var(--up-h));
+			}
+
+			.p-c-i-3 {
+				top: calc((25vh - 18vmin) / 7 * 2);
+				left: calc((65vw - 32vmin) / 7 * 2);
+			}
+
+			.p-c-i-3:hover {
+				top: calc((25vh - 18vmin) / 7 * 2 - var(--up-h));
+			}
+
+			.p-c-i-4 {
+				top: calc((25vh - 18vmin) / 7 * 3);
+				left: calc((65vw - 32vmin) / 7 * 3);
+			}
+
+			.p-c-i-4:hover {
+				top: calc((25vh - 18vmin) / 7 * 3 - var(--up-h));
+			}
+
+			.p-c-i-5 {
+				top: calc((25vh - 18vmin) / 7 * 4);
+				left: calc((65vw - 32vmin) / 7 * 4);
+			}
+
+			.p-c-i-5:hover {
+				top: calc((25vh - 18vmin) / 7 * 4 - var(--up-h));
+			}
+
+			.p-c-i-6 {
+				top: calc((25vh - 18vmin) / 7 * 5);
+				left: calc((65vw - 32vmin) / 7 * 5);
+			}
+
+			.p-c-i-6:hover {
+				top: calc((25vh - 18vmin) / 7 * 5 - var(--up-h));
+			}
+
+			.p-c-i-7 {
+				top: calc((25vh - 18vmin) / 7 * 6);
+				left: calc((65vw - 32vmin) / 7 * 6);
+			}
+
+			.p-c-i-7:hover {
+				top: calc((25vh - 18vmin) / 7 * 6 - var(--up-h));
+			}
+
+			.p-c-i-8 {
+				top: calc(25vh - 18vmin);
+				left: calc(65vw - 32vmin);
+			}
+
+			.p-c-i-8:hover {
+				top: calc(25vh - 18vmin - var(--up-h));
+			}
+
+			.policy-pic {
+				width: 100%;
+			}
+
+			.polic-date {
+				margin: 0 0 0 10px;
+				padding-left: 20px;
+				width: 60%;
+				font-size: 3vmin;
+				font-weight: bold;
+				border: 5px solid #9DC3E6;
+				border-width: 0px 0px 0px 10px;
+			}
+
+			.polic-name {
+				margin: 0;
+				padding-right: 20px;
+				width: 60%;
+				font-size: 3vmin;
+				font-weight: bold;
+				border: 5px solid #9DC3E6;
+				border-width: 0px 10px 0px 0px;
+			}
+
+			@media screen and (max-width: 750px),
+			@media screen and (max-device-width : 750px) {
+				.policy {
+					left: 0;
+					width: 98vw;
+				}
+
+				.title {
+					left: 0;
+					width: calc(98vw - 30px);
+				}
+
+				.title-1 {
+					top: 10%;
+				}
+
+				.title-2 {
+					top: 15%;
+				}
+
+				.policy-1 {
+					top: 12%;
+				}
+
+				.policy-2 {
+					top: 17%;
+				}
+
+				.p-p-i-2 {
+					left: calc((98vw - 32vmin) / 5 * 1);
+				}
+
+				.p-p-i-3 {
+					left: calc((98vw - 32vmin) / 5 * 2);
+				}
+
+				.p-p-i-4 {
+					left: calc((98vw - 32vmin) / 5 * 3);
+				}
+
+				.p-p-i-5 {
+					left: calc((98vw - 32vmin) / 5 * 4);
+				}
+
+				.p-p-i-6 {
+					left: calc(98vw - 32vmin);
+				}
+
+				.p-c-i-2 {
+					left: calc((98vw - 32vmin) / 7 * 1);
+				}
+
+				.p-c-i-3 {
+					left: calc((98vw - 32vmin) / 7 * 2);
+				}
+
+				.p-c-i-4 {
+					left: calc((98vw - 32vmin) / 7 * 3);
+				}
+
+				.p-c-i-5 {
+					left: calc((98vw - 32vmin) / 7 * 4);
+				}
+
+				.p-c-i-6 {
+					left: calc((98vw - 32vmin) / 7 * 5);
+				}
+
+				.p-c-i-7 {
+					left: calc((98vw - 32vmin) / 7 * 6);
+				}
+
+				.p-c-i-8 {
+					left: calc(98vw - 32vmin);
+				}
+			}
+		</style>
+		<script type="text/javascript">
+			var p_p_data = [
+				["《国务院办公厅关于切实做好长江流域禁捕有关工作的通知》"],
+				["《农业农村部关于加强长江流域禁捕执法管理工作的意见》"],
+				["《农业农村部关于设立长江口禁捕管理区的通告》"],
+				["《农业农村部办公厅关于进一步明确长江禁捕期间因特殊需要采集水生生物有关事项的函》"],
+				["《农业农村部办公厅关于进一步加强长江流域垂钓管理工作的意见》"],
+				["《关于进一步规范长江流域水生生物增殖放流工作的通知》"]
+			];
+			var p_c_data = [
+				["1月16日", "《新型冠状病毒感染的肺炎诊疗方案（试行）》"],
+				["1月18日", "《新型冠状病毒感染的肺炎诊疗方案（试行第二版）》"],
+				["1月22日", "《新型冠状病毒感染的肺炎诊疗方案（试行第三版）》"],
+				["1月27日", "《新型冠状病毒感染的肺炎诊疗方案（试行第四版）》"],
+				["2月4日", "《新型冠状病毒感染的肺炎诊疗方案（试行第五版）》"],
+				["2月8日", "《新型冠状病毒肺炎诊疗方案（试行第五版 修正版）》"],
+				["2月18日", "《新型冠状病毒肺炎诊疗方案（试行第六版）》"],
+				["3月3日", "《新型冠状病毒肺炎诊疗方案（试行第七版）》"]
+			];
+
+			function policyOnMouseOver(type, idx) {
+				if (type == 1) {
+					document.getElementById("p_p_date").innerHTML = p_p_data[idx][0];
+					document.getElementById("p_p_date").setAttribute("style", "");
+					document.getElementById("p_p_name").setAttribute("style", "");
+				} else if (type == 2) {
+					document.getElementById("p_c_date").innerHTML = p_c_data[idx][0];
+					document.getElementById("p_c_name").innerHTML = p_c_data[idx][1];
+					document.getElementById("p_c_date").setAttribute("style", "");
+					document.getElementById("p_c_name").setAttribute("style", "");
+				} else {
+					document.getElementById("p_p_date").setAttribute("style", "display:none;");
+					document.getElementById("p_p_name").setAttribute("style", "display:none;");
+					document.getElementById("p_c_date").setAttribute("style", "display:none;");
+					document.getElementById("p_c_name").setAttribute("style", "display:none;");
+				}
+			}
+
+			function policyOnMouseOut(type) {
+				if (type == 1) {
+					document.getElementById("p_p_date").setAttribute("style", "display:none;");
+					document.getElementById("p_p_name").setAttribute("style", "display:none;");
+				} else if (type == 2) {
+					document.getElementById("p_c_date").setAttribute("style", "display:none;");
+					document.getElementById("p_c_name").setAttribute("style", "display:none;");
+				} else {
+					document.getElementById("p_p_date").setAttribute("style", "display:none;");
+					document.getElementById("p_p_name").setAttribute("style", "display:none;");
+					document.getElementById("p_c_date").setAttribute("style", "display:none;");
+					document.getElementById("p_c_name").setAttribute("style", "display:none;");
+				}
+			}
+			window.onload = function() {
+				document.getElementById("p_p_date").setAttribute("style", "display:none;");
+				document.getElementById("p_p_name").setAttribute("style", "display:none;");
+				document.getElementById("p_c_date").setAttribute("style", "display:none;");
+				document.getElementById("p_c_name").setAttribute("style", "display:none;");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="bg">
+		</div>
+		<div class="title title-1">
+			长江流域水生生物保护其他重要政策
+			<span class="polic-date" id="p_p_date"></span>
+			<span class="polic-name" id="p_p_name"></span>
+		</div>
+		<div class="policy policy-1">
+			<a class="policy-item p-p-i-1" onmouseover="policyOnMouseOver(1,0)" onmouseout="policyOnMouseOut(1)" href="https://www.gov.cn/zhengce/content/2020-07/08/content_5525124.htm"
+			 target="_blank">
+				<img class="policy-pic" src="https://i.postimg.cc/FzMtdtYr/image.png">
+			</a>
+			<a class="policy-item p-p-i-2" onmouseover="policyOnMouseOver(1,1)" onmouseout="policyOnMouseOut(1)" href="https://www.gov.cn/zhengce/zhengceku/2020-03/18/content_5492812.htm"
+			 target="_blank">
+				<img class="policy-pic" src="https://i.postimg.cc/gkgSTbzn/image.png">
+			</a>
+			<a class="policy-item p-p-i-3" onmouseover="policyOnMouseOver(1,2)" onmouseout="policyOnMouseOut(1)" href="https://www.gov.cn/zhengce/zhengceku/2020-11/28/content_5565651.htm"
+			 target="_blank">
+				<img class="policy-pic" src="https://i.postimg.cc/CKGb9bGm/image.png">
+			</a>
+			<a class="policy-item p-p-i-4" onmouseover="policyOnMouseOver(1,3)" onmouseout="policyOnMouseOut(1)" href="https://www.moa.gov.cn/nybgb/2020/202012/202102/t20210201_6360836.htm"
+			 target="_blank">
+				<img class="policy-pic" src="https://i.postimg.cc/gcQrqnRJ/image.png">
+			</a>
+			<a class="policy-item p-p-i-5" onmouseover="policyOnMouseOver(1,4)" onmouseout="policyOnMouseOut(1)" href="http://www.cjyzbgs.moa.gov.cn/tzgg/202101/t20210120_6360172.htm"
+			 target="_blank">
+				<img class="policy-pic" src="https://i.postimg.cc/rw8dz7xC/image.png">
+			</a>
+			<a class="policy-item p-p-i-6" onmouseover="policyOnMouseOver(1,5)" onmouseout="policyOnMouseOut(1)" href="http://www.cjyzbgs.moa.gov.cn/tzgg/202006/t20200610_6346250.htm"
+			 target="_blank">
+				<img class="policy-pic" src="https://i.postimg.cc/jdvx32nP/image.png">
+			</a>
+		</div>
+
+		<!-- <div class="title title-2">
+			诊疗方案
+			<span class="polic-date" id="p_c_date"></span>
+			<span class="polic-name" id="p_c_name"></span>
+		</div>
+		<div class="policy policy-2">
+			<a class="policy-item p-c-i-1" onmouseover="policyOnMouseOver(2,0)" onmouseout="policyOnMouseOut(2)" href="http://med.china.com.cn/content/pid/156973/tid/1026"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-1.png">
+			</a>
+			<a class="policy-item p-c-i-2" onmouseover="policyOnMouseOver(2,1)" onmouseout="policyOnMouseOut(2)" href="https://flbook.com.cn/c/PsYxtNat77#page/2"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-2.png">
+			</a>
+			<a class="policy-item p-c-i-3" onmouseover="policyOnMouseOver(2,2)" onmouseout="policyOnMouseOut(2)" href="http://www.gov.cn/zhengce/zhengceku/2020-01/23/content_5471832.htm"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-3.png">
+			</a>
+			<a class="policy-item p-c-i-4" onmouseover="policyOnMouseOver(2,3)" onmouseout="policyOnMouseOut(2)" href="http://www.gov.cn/zhengce/zhengceku/2020-01/28/content_5472673.htm"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-4.png">
+			</a>
+			<a class="policy-item p-c-i-5" onmouseover="policyOnMouseOver(2,4)" onmouseout="policyOnMouseOut(2)" href="http://www.gov.cn/zhengce/zhengceku/2020-02/05/content_5474791.htm"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-5.png">
+			</a>
+			<a class="policy-item p-c-i-6" onmouseover="policyOnMouseOver(2,5)" onmouseout="policyOnMouseOut(2)" href="http://www.gov.cn/zhengce/zhengceku/2020-02/09/content_5476407.htm"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-6.png">
+			</a>
+			<a class="policy-item p-c-i-7" onmouseover="policyOnMouseOver(2,6)" onmouseout="policyOnMouseOut(2)" href="http://www.gov.cn/zhengce/zhengceku/2020-02/19/content_5480948.htm"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-7.png">
+			</a>
+			<a class="policy-item p-c-i-8" onmouseover="policyOnMouseOver(2,7)" onmouseout="policyOnMouseOut(2)" href="http://www.gov.cn/zhengce/zhengceku/2020-03/04/content_5486705.htm"
+			 target="_blank">
+				<img class="policy-pic" src="img/policy/policy-c-8.png">
+			</a>
+		</div> -->
+	</body>
+</html>
